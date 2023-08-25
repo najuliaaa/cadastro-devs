@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: white;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main.container {
+  background: white;
+  width: 80vw; /* Ajusta a largura para 80% da largura da janela */
+  max-width: 800px; /* Define uma largura máxima para evitar que o conteúdo fique muito largo */
+  min-height: 60vh; /* Ajusta a altura mínima para 60% da altura da janela */
+  padding: 2rem;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  border:1px solid #CCC;
+}
+
+main h2 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+main h2::before {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 25px;
+  bottom: 3px;
+  left: 0;
+  border-radius: 8px;
+  background: black;
+}
+
+main form .campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.main form .campo label {
+  font-weight: bold;
+  text-align: center; /* Centraliza o texto */
+}
+
+.main form .campo input[type="text"],
+.main form .campo input[type="email"] {
+  outline: none;
+  font-size: 3vw; /* Ajusta o tamanho da fonte em relação à largura da janela */
+  color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  padding: 2vw; /* Ajusta o preenchimento em relação à largura da janela */
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.main form .campo input[type="text"]::placeholder,
+.main form .campo input[type="email"]::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.main form .campo input[type="radio"],
+.main form .campo input[type="checkbox"] {
+  margin-top: 1vw; /* Ajusta a margem superior em relação à largura da janela */
+  align-self: center; /* Centraliza os botões */
+}
+
+.main form .campo label strong {
+  margin-bottom: 0.5vw; /* Ajusta a margem inferior em relação à largura da janela */
+}
+
+.main form .campo .underline::before,
+.main form .campo .underline::after {
+  content: "";
+  position: absolute;
+  height: 0.5vw; /* Ajusta a altura da linha em relação à largura da janela */
+  width: 100%;
+  bottom: -2.5vw; /* Ajusta a distância inferior em relação à largura da janela */
+  left: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.main form .campo input:focus ~ .underline::after {
+  transform: scaleX(1);
+}
+
+main form input[type="submit"] {
+  margin-top: 2vw; /* Ajusta a margem superior em relação à largura da janela */
+  padding: 1.5vw; /* Ajusta o preenchimento em relação à largura da janela */
+  width: 100%;
+  background: black;
+  cursor: pointer;
+  color: white;
+  font-size: 1vw; /* Ajusta o tamanho da fonte em relação à largura da janela */
+  font-weight: 300;
+  border-radius: 4px;
+  transition: all 0.6s ease;
+}
+
+main form input[type="submit"]:hover {
+  letter-spacing: 0.1vw; /* Ajusta o espaçamento das letras em relação à largura da janela */
+  background: silver;
+}
+
+div#check {
+  font-weight: bold;
+  text-align: center; /* Centraliza o texto */
+  margin-bottom: 2rem;
+}
